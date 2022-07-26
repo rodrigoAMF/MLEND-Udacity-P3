@@ -28,7 +28,7 @@ jobs:
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
       
       - name: Install pytest
-        runs: pip install pytest==7.1.2
+        run: pip install pytest==7.1.2
 
       - name: Run pytest
-        runs: pytest
+        run: pytest

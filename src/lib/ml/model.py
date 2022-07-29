@@ -1,9 +1,13 @@
+import numpy as np
 import lightgbm as lgb
 
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 
+from lib.ml.data import process_data
 
 # Optional: implement hyperparameter tuning.
+
+
 def train_model(X_train, y_train):
     """
     Trains a machine learning model and returns it.
@@ -66,3 +70,27 @@ def inference(model, X):
     preds = model.predict(X)
 
     return preds
+
+
+def compute_model_metrics_slide(model, encoder, lb, data, cat_features,
+                                column_slice="education"):
+
+    unique_values = np.unique(data["education"].values)
+
+    with open("slide_output.txt", 'w') as f:
+        for value in unique_values:
+            data_w_slide = data[data[column_slice].str.contains(value)]
+
+            X, y, encoder, lb = process_data(
+                data_w_slide, categorical_features=cat_features, label="salary", training=False,
+                encoder=encoder, lb=lb
+            )
+
+            y_pred = inference(model, X)
+            precision, recall, fbeta = compute_model_metrics(y, y_pred)
+
+            print(f"Metrics using slice {column_slice} == {value}", file=f)
+            print(f"Precision: {precision:.4f}", file=f)
+            print(f"Recall:    {recall:.4f}", file=f)
+            print(f"F-beta:    {fbeta:.4f}", file=f)
+            print(file=f)

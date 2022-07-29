@@ -1,0 +1,80 @@
+Metrics using slice education ==  10th
+Precision: 0.9444
+Recall:    0.2742
+F-beta:    0.4250
+
+Metrics using slice education ==  11th
+Precision: 1.0000
+Recall:    0.4000
+F-beta:    0.5714
+
+Metrics using slice education ==  12th
+Precision: 0.9091
+Recall:    0.3030
+F-beta:    0.4545
+
+Metrics using slice education ==  1st-4th
+Precision: 1.0000
+Recall:    0.1667
+F-beta:    0.2857
+
+Metrics using slice education ==  5th-6th
+Precision: 1.0000
+Recall:    0.3125
+F-beta:    0.4762
+
+Metrics using slice education ==  7th-8th
+Precision: 0.8750
+Recall:    0.1750
+F-beta:    0.2917
+
+Metrics using slice education ==  9th
+Precision: 1.0000
+Recall:    0.1481
+F-beta:    0.2581
+
+Metrics using slice education ==  Assoc-acdm
+Precision: 0.7915
+Recall:    0.7019
+F-beta:    0.7440
+
+Metrics using slice education ==  Assoc-voc
+Precision: 0.7622
+Recall:    0.6039
+F-beta:    0.6739
+
+Metrics using slice education ==  Bachelors
+Precision: 0.7985
+Recall:    0.8384
+F-beta:    0.8179
+
+Metrics using slice education ==  Doctorate
+Precision: 0.8645
+Recall:    0.9379
+F-beta:    0.8997
+
+Metrics using slice education ==  HS-grad
+Precision: 0.8383
+Recall:    0.3996
+F-beta:    0.5413
+
+Metrics using slice education ==  Masters
+Precision: 0.8389
+Recall:    0.8905
+F-beta:    0.8639
+
+Metrics using slice education ==  Preschool
+Precision: 1.0000
+Recall:    1.0000
+F-beta:    1.0000
+
+Metrics using slice education ==  Prof-school
+Precision: 0.9007
+Recall:    0.9645
+F-beta:    0.9315
+
+Metrics using slice education ==  Some-college
+Precision: 0.7467
+Recall:    0.6126
+F-beta:    0.6730
+

@@ -82,8 +82,8 @@ def compute_model_metrics_slide(model, encoder, lb, data, cat_features,
             data_w_slide = data[data[column_slice].str.contains(value)]
 
             X, y, encoder, lb = process_data(
-                data_w_slide, categorical_features=cat_features, label="salary", training=False,
-                encoder=encoder, lb=lb
+                data_w_slide, categorical_features=cat_features,
+                label="salary", training=False, encoder=encoder, lb=lb
             )
 
             y_pred = inference(model, X)

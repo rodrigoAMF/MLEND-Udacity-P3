@@ -4,7 +4,8 @@ from joblib import dump
 from sklearn.model_selection import train_test_split
 
 from lib.ml.data import process_data
-from lib.ml.model import train_model, inference, compute_model_metrics, compute_model_metrics_slide
+from lib.ml.model import (train_model, inference, compute_model_metrics,
+                          compute_model_metrics_slide)
 
 
 # Add code to load in the data.
@@ -13,7 +14,8 @@ data = pd.read_csv("data/census.csv")
 data = data.drop_duplicates()
 data.columns = [column.strip() for column in data.columns]
 
-# Optional enhancement, use K-fold cross validation instead of a train-test split.
+# Optional enhancement, use K-fold cross validation instead of a
+# train-test split.
 train, test = train_test_split(data, test_size=0.20)
 train.to_csv("data/train.csv", index=False)
 test.to_csv("data/test.csv", index=False)

@@ -77,7 +77,7 @@ def compute_model_metrics_slide(model, encoder, lb, data, cat_features,
 
     unique_values = np.unique(data["education"].values)
 
-    with open("slide_output.txt", 'w') as f:
+    with open("slice_output.txt", 'w') as f:
         for value in unique_values:
             data_w_slide = data[data[column_slice].str.contains(value)]
 

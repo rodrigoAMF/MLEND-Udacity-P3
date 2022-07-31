@@ -2,8 +2,7 @@ import pandas as pd
 from joblib import load
 
 from lib.ml.data import process_data
-from lib.ml.model import (inference, compute_model_metrics,
-                          compute_model_metrics_slide)
+from lib.ml.model import inference, compute_model_metrics
 
 train_data = pd.read_csv("data/train.csv")
 test_data = pd.read_csv("data/test.csv")

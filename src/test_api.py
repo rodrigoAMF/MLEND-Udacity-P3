@@ -15,7 +15,7 @@ def test_greeting():
     assert response.json() == {"message": "Hi there!"}
 
 
-def test_prediction():
+def test_prediction_below_or_equal_50k():
     response = client.post("/inference", json={
         "age": 26,
         "workclass": "Local-gov",
@@ -36,6 +36,8 @@ def test_prediction():
     assert response.status_code == 200
     assert response.json() == {"predicted_salary": "<=50K"}
 
+
+def test_prediction_above_50k():
     response = client.post("/inference", json={
         "age": 42,
         "workclass": "State-gov",

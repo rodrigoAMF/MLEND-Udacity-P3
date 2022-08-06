@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI
 import pandas as pd
 from joblib import load
@@ -11,9 +13,10 @@ from lib.ml.model import inference
 # Instantiate the FastAPI object
 app = FastAPI()
 
-app.encoder = load('model/encoder.joblib')
-app.lb = load('model/lb.joblib')
-app.model = load('model/model.joblib')
+absolute_path = os.path.dirname(os.path.abspath(__file__))
+app.encoder = load(os.path.join(absolute_path, 'model/encoder.joblib'))
+app.lb = load(os.path.join(absolute_path, 'model/lb.joblib'))
+app.model = load(os.path.join(absolute_path, 'model/model.joblib'))
 
 cat_features = [
     "workclass",

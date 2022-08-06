@@ -26,4 +26,4 @@ response = requests.post(url, data=json.dumps(features))
 
 print(f"Request status code: {response.status_code}")
 print("Request response:")
-print(response.json())
+print(response.content)
